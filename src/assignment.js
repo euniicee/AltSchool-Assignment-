@@ -177,14 +177,29 @@ export function calculateFactorials(arrayOfNumbers) {
  */
 export function findPrimeNumbers(arrayOfNumbers) {
     console.log(arrayOfNumbers)
-    const sum = 0
-    const count = 0
+    let sum = 0
+
     const arrayOfPrimes = []
 
     // write your code here
+    for (const n of arrayOfNumbers) {
+        if (n <= 1)
+            continue
+        let isPrime = true
+        for (let i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i === 0) {
+                isPrime = false
+                break
+            }
+        }
+        if (isPrime) {
+            arrayOfPrimes.push(n)
+            sum += n
+        }
+    }
 
     return {
-        count,
+        count: arrayOfPrimes.length,
         sum,
         arrayOfPrimes,
     }
