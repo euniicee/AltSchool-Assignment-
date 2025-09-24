@@ -218,6 +218,9 @@ export function doubleTheValues(arrayOfNumbers) {
     const result = []
 
     // write your code here
+    for (const n of arrayOfNumbers) {
+        result.push(n * 2)
+    }
 
     return result
 }
