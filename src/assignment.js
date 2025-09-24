@@ -33,16 +33,20 @@ export function sumOfNumbersTo(destination) {
 export function evenNumbersWithin(destination) {
     console.log(destination)
     // get the number from 0 to destination
-    const sum = 0
-    const count = 0
+    let sum = 0
     const arrayOfEvenNumbers = []
 
     // write your code here
 
+    for (let i = 0; i <= destination; i += 2) {
+        arrayOfEvenNumbers.push(i)
+        sum += i
+    }
     return {
-        count,
+        count: arrayOfEvenNumbers.length,
         sum,
         arrayOfEvenNumbers,
+
     }
 }
 
