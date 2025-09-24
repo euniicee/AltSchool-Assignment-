@@ -15,7 +15,11 @@
 export function sumOfNumbersTo(destination) {
     console.log(destination)
     // write your code here
-    return 0
+    let sum = 0
+    for (let i = 1; i <= destination; i++) {
+        sum += i
+    }
+    return sum
 }
 
 /**
