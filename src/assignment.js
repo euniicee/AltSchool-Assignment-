@@ -150,6 +150,17 @@ export function calculateFactorials(arrayOfNumbers) {
     const result = []
 
     // write your code here
+    for (const n of arrayOfNumbers) {
+        if (n < 0) {
+            result.push(0)
+            continue
+        }
+        let factorial = 1
+        for (let i = 1; i <= n; i++) {
+            factorial *= i
+        }
+        result.push(factorial)
+    }
 
     return result
 }
