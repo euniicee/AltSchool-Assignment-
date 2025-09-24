@@ -115,14 +115,20 @@ export function oddNumbersWithin(destination) {
  */
 export function findMultiples(arrayOfNumbers, factor) {
     console.log(arrayOfNumbers, factor)
-    const sum = 0
-    const count = 0
+    let sum = 0
+
     const arrayOfMultiples = []
 
     // write your code here
+    for (const num of arrayOfNumbers) {
+        if (num % factor === 0) {
+            arrayOfMultiples.push(num)
+            sum += num
+        }
+    }
 
     return {
-        count,
+        count: arrayOfMultiples.length,
         sum,
         arrayOfMultiples,
     }
