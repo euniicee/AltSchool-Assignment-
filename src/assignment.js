@@ -68,6 +68,9 @@ export function celsiusToFahrenheit(arrayOfNumbers) {
     const result = []
 
     // write your code here
+    for (const c of arrayOfNumbers) {
+        result.push(Math.trunc(c * 9 / 5 + 32))
+    }
 
     return result
 }
@@ -84,14 +87,17 @@ export function celsiusToFahrenheit(arrayOfNumbers) {
 export function oddNumbersWithin(destination) {
     console.log(destination)
     // get the number from 0 to destination
-    const sum = 0
-    const count = 0
+    let sum = 0
     const arrayOfOddNumbers = []
 
     // write your code here
+    for (let i = 1; i <= destination; i += 2) { // start at 1 and step by 2
+        arrayOfOddNumbers.push(i)
+        sum += i
+    }
 
     return {
-        count,
+        count: arrayOfOddNumbers.length,
         sum,
         arrayOfOddNumbers,
     }
